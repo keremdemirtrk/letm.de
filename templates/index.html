@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <link href="css/landing.min.css" rel="stylesheet" type="text/css" media="all">
+     <script type=text/javascript src={{url_for('static', filename='js/landing.min.js') }}></script>
+
+     <title>Parr.ga</title>
+<style>
+.shell-yellow{
+    font-size:72px;
+    color: #FFD43D !important;
+}
+.autotype{
+    font-size: 72px;
+}
+</style>
+</head>
+
+<body style="background-color:#2B475E;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+   
+    <center>
+
+        <br><br><br><br>
+        <table>
+            <tr>
+                <td>
+                    <img src={{url_for('static', filename='logo.png')}}></img>
+                </td>
+            </tr>
+            
+        </table>
+            <div class="autotype">
+                <span class="shell-yellow">
+                    letm.de /
+                </span>
+                <span id="autotype">
+                </span>
+                <span class="typed-cursor">
+                </span>
+            </div>
+            <br><br><br><br>
+            <button type="button" class="btn btn-dark">letm.de is a fast forwarding site for you. <br>Click here to reveal all the secrets about it.</button>
+    </center>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/landing.min.js"></script>
+    <script>
+        var typed = new Typed('#autotype', { strings: ["bilalgoregenduldul", "arcticmonkey", "bilalgoregenduldul", "babyshark","lofihiphop","goodmorningsong", "pewdiepie", "oldtownroad"], typeSpeed: 75, backSpeed: 30, loop: true }); $.ajax({ type: "GET", dataType: "json", url: '/api/stats/overview', success: function (response) { $("#usercount").empty().append(response.users); $("#machinecount").empty().append(response.machines); $("#challengecount").empty().append(response.challenges); } });
+    </script>
+</body>
+
+</html> 
