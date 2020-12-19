@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__,template_folder='templates')
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def hello():
     return render_template("index.html")
 
